@@ -2,6 +2,8 @@
 // so you can safely delete all default props below
 
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
+  nearby: 'Nearby',
+  encounters: 'Encounters',
+  chat: 'Chat',
+  profile: 'Profile'
 }
