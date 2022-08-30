@@ -1,11 +1,11 @@
 <template>
-<div class="bg-white shadow-xl  flex items-center justify-between">
-  <div class="flex items-center justify-center p-1 relative-position"
+<div class="bg-fourtiary shadow-xl  flex items-center justify-between">
+  <div class=" flex items-center justify-center p-1 relative-position"
        :class="`w-1/${tabs.length}`"  v-for="tab in tabs" :key="tab.id"
        v-ripple
         @click="onTabClick(tab.title)">
-    <q-icon size="sm" :name="tab.icon" :class="(router.currentRoute.value.name === tab.title)? 'text-black':'text-gray-500'"/>
-    <div class="text-gray-500 text-xs  w-full text-center" :class="(router.currentRoute.value.name===tab.title)?'text-gray-500':'text-black'">{{t(tab.title)}}</div>
+    <q-icon size="sm"  :name="tab.icon" :class="(router.currentRoute.value.name === tab.title)? 'text-primary':'text-accent'"/>
+    <div class="text-xs  w-full text-center" :class="(router.currentRoute.value.name===tab.title)?'text-primary':'text-accent'">{{t(tab.title)}}</div>
   </div>
 </div>
 </template>

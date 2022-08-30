@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', {
+export const useCounterStore = defineStore('profile', {
   state: () => ({
     counter: 0
   }),
