@@ -4,7 +4,7 @@
       <router-view />
     </q-page-container>
     <q-footer>
-      <bottom-navigation :tabs="tabs"/>
+      <bottom-navigation :tabs="tabs" @onSelect="onSelectedTab"/>
     </q-footer>
   </q-layout>
 </template>
@@ -12,4 +12,11 @@
 <script lang="ts" setup>
 import BottomNavigation from 'components/BottomNavigation.vue'
 import { tabs } from 'src/constants/fakeDataGenerator'
+import { useRouter } from 'vue-router'
+import { TabTitle } from 'src/constants/models/ITab'
+
+const router = useRouter()
+function onSelectedTab (tabTitle: TabTitle) {
+  router.push({ name: tabTitle })
+}
 </script>

@@ -3,18 +3,20 @@
   <div class="flex items-center justify-center p-1 relative-position"
        :class="`w-1/${tabs.length}`"  v-for="tab in tabs" :key="tab.id"
        v-ripple
-        @click="selectedTab = tab.id">
-    <q-icon size="sm" :name="tab.icon" :class="(selectedTab===tab.id)? 'text-black':'text-gray-500'"/>
-    <div class="text-gray-500 text-xs  w-full text-center" :class="(selectedTab===tab.id)?'text-gray-500':'text-black'">{{t(tab.title)}}</div>
+        @click="onTabClick(tab.title)">
+    <q-icon size="sm" :name="tab.icon" :class="(router.currentRoute.value.name === tab.title)? 'text-black':'text-gray-500'"/>
+    <div class="text-gray-500 text-xs  w-full text-center" :class="(router.currentRoute.value.name===tab.title)?'text-gray-500':'text-black'">{{t(tab.title)}}</div>
   </div>
 </div>
 </template>
 
 <script lang="ts" setup>
-import { ITab } from 'src/constants/models/ITab'
+import { ITab, TabTitle } from 'src/constants/models/ITab'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 const { t } = useI18n({})
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 defineProps({
   tabs: {
@@ -23,7 +25,10 @@ defineProps({
   }
 })
 
-const selectedTab = ref(1)
+const emit = defineEmits<{(e: string, tabTitle: string): void }>()
+function onTabClick (tabTitle: TabTitle) {
+  emit('onSelect', tabTitle)
+}
 
 </script>
 

@@ -1,0 +1,20 @@
+<template>
+  <div class="bg-white flex items-center justify-between p-2">
+    <div class="flex-1 flex items-center justify-start">
+      <q-icon size="sm" class="mx-4" name="fa fa-gear"/>
+    </div>
+    <img :src="badooImage" class="w-8 h-8">
+    <div class="flex-1 flex items-center justify-end">
+      <q-icon size="sm" class="mx-4" name="fa fa-user-pen"/>
+    </div>
+
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { badooImage } from 'src/constants/images'
+</script>
+
+<style scoped>
+
+</style>
