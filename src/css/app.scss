@@ -3,6 +3,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body{
-  background: #E7E7E7;
+#q-app {
+  background: var(--q-tertiary);
 }
