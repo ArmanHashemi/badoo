@@ -5,7 +5,7 @@ const store = useGlobalStore()
 function changeTheme () {
   if (LocalStorage.getItem('theme') === 'dark') {
     setCssVar('primary', '#6e3eff')
-    setCssVar('secondary', '#000051')
+    setCssVar('secondary', '#a6a0a0')
     setCssVar('accent', '#212020')
     setCssVar('tertiary', '#E7E7E7')
     setCssVar('fourtiary', '#F7F7F7')
@@ -13,7 +13,7 @@ function changeTheme () {
     LocalStorage.set('theme', 'light')
   } else {
     setCssVar('primary', '#6e3eff')
-    setCssVar('secondary', '#F7F7F7')
+    setCssVar('secondary', '#a6a0a0')
     setCssVar('accent', '#E7E7E7')
     setCssVar('tertiary', '#7E7E7E')
     setCssVar('fourtiary', '#444444')
@@ -24,13 +24,13 @@ function changeTheme () {
 function loadTheme () {
   if (LocalStorage.getItem('theme') === 'dark') {
     setCssVar('primary', '#6e3eff')
-    setCssVar('secondary', '#F7F7F7')
+    setCssVar('secondary', '#a6a0a0')
     setCssVar('accent', '#E7E7E7')
     setCssVar('tertiary', '#7E7E7E')
     setCssVar('fourtiary', '#444444')
   } else {
     setCssVar('primary', '#6e3eff')
-    setCssVar('secondary', '#000051')
+    setCssVar('secondary', '#a6a0a0')
     setCssVar('accent', '#212020')
     setCssVar('tertiary', '#E7E7E7')
     setCssVar('fourtiary', '#F7F7F7')
