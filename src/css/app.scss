@@ -6,3 +6,12 @@
 #q-app {
   background: var(--q-tertiary);
 }
+.q-tab__content.self-stretch{
+  width: 100% !important;
+}
+.q-tab-panels{
+  background: unset !important;
+}
+.q-scrollarea__content {
+  position: relative !important;
+}

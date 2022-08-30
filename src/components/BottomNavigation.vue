@@ -13,7 +13,6 @@
 <script lang="ts" setup>
 import { ITab, TabTitle } from 'src/constants/models/ITab'
 import { useI18n } from 'vue-i18n'
-import { ref } from 'vue'
 const { t } = useI18n({})
 import { useRouter } from 'vue-router'
 const router = useRouter()
